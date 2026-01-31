@@ -1,0 +1,22 @@
+name: Deploy to Elastic Beanstalk
+description: Deploy application to AWS Elastic Beanstalk
+inputs:
+  aws_access_key:
+    required: true
+  aws_secret_key:
+    required: true
+  application_name:
+    required: true
+  environment_name:
+    required: true
+  existing_bucket_name:
+    required: true
+  region:
+    required: true
+  version_label:
+    required: true
+  deployment_package:
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
